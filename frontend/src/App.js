@@ -3,6 +3,8 @@ import EventCard from "./EventCard";
 
 function App() {
   const [events, setEvents] = useState([]);
+  const [error, setError] = useState(null);
+
   const today = new Date().toLocaleDateString("en-AU", {
     weekday: "long",
     year: "numeric",
@@ -11,9 +13,13 @@ function App() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/events")
-      .then(res => res.json())
-      .then(setEvents);
+    fetch("/api/events")
+      .then(res => {
+        if (!res.ok) throw new Error("Failed to fetch events");
+        return res.json();
+      })
+      .then(setEvents)
+      .catch(() => setError("Failed to load events. Please try again later."));
   }, []);
 
   return (
@@ -21,7 +27,9 @@ function App() {
       <h1>Louder World: Sydney Events</h1>
       <p className="date">{today}</p>
       <div className="events-list">
-        {events.length === 0 ? (
+        {error ? (
+          <p style={{ color: "red" }}>{error}</p>
+        ) : events.length === 0 ? (
           <p>Loading events...</p>
         ) : (
           events.map((event, idx) => <EventCard key={idx} event={event} />)
