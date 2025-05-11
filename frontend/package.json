@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Frontend for Event Management of Sydney project",
-  "author": "Your Name",
+  "author": "Sarnitha A D",
   "license": "MIT",
   "dependencies": {
     "react": "^18.2.0",
