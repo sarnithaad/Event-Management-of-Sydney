@@ -4,7 +4,7 @@
   "description": "Backend for Event Management of Sydney project",
   "main": "app.py",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.py"
   },
   "repository": {
     "type": "git",
