@@ -70,8 +70,8 @@ function App() {
   return (
     <div className="container">
       <h1 tabIndex={0}>What's On in Sydney !?</h1>
-    <p> Check out the latest events that are happening in and around Sydney</p>
-    <p>Follow for more information!</p>
+    <center><p> Check out the latest events that are happening in and around Sydney </p>
+    <p>Follow for more updates!</p></center>
       <p className="date">{today}</p>
 
       {error && (
