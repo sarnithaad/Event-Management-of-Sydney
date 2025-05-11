@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: url('https://pplx-res.cloudinary.com/image/private/user_uploads/67643958/6c809631-3bf2-4554-8f3f-a76ea2735098/bg.jpg') no-repeat center top;
+  background: url('/bg.jpg') no-repeat center top;
   background-size: cover;
   background-attachment: fixed;
   margin: 0;
