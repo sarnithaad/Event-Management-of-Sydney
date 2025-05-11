@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+const API_BASE = process.env.REACT_APP_BACKEND_URL;
+
 function EmailModal({ eventUrl, onClose }) {
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -9,7 +11,7 @@ function EmailModal({ eventUrl, onClose }) {
     e.preventDefault();
     setSubmitting(true);
     setError(null);
-    fetch("/api/redirect", {
+    fetch(`${API_BASE}/api/redirect`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, event_url: eventUrl })
