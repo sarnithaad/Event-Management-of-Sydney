@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import EventCard from "./EventCard";
 
+const API_BASE = process.env.REACT_APP_BACKEND_URL;
+
 function App() {
   const [events, setEvents] = useState([]);
   const [error, setError] = useState(null);
@@ -13,7 +15,7 @@ function App() {
   });
 
   useEffect(() => {
-    fetch("/api/events")
+    fetch(`${API_BASE}/api/events`)
       .then(res => {
         if (!res.ok) throw new Error("Failed to fetch events");
         return res.json();
