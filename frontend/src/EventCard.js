@@ -10,7 +10,9 @@ function EventCard({ event }) {
         <h2>{event.title}</h2>
         <p className="event-date">{event.date}</p>
         <p className="event-location">{event.location}</p>
-        <p className="event-description">{event.description}</p>
+        {event.description && (
+          <p className="event-description">{event.description}</p>
+        )}
       </div>
       <button className="get-tickets" onClick={() => setShowModal(true)}>
         GET TICKETS
