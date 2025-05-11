@@ -2,7 +2,7 @@
   "name": "event-management-of-sydney-backend",
   "version": "1.0.0",
   "description": "Backend for Event Management of Sydney project",
-  "main": "app.js",
+  "main": "app.py",
   "scripts": {
     "start": "node app.js"
   },
@@ -17,7 +17,7 @@
     "backend",
     "express"
   ],
-  "author": "Your Name",
+  "author": "Sarnitha A D",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
