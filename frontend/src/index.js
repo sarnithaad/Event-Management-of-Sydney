@@ -4,7 +4,7 @@ import App from "./App";
 import "./styles.css";
 
 // Set the document title for accessibility & SEO
-document.title = "Events in Sydney";
+document.title = "Your Guide to Sydney Events";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
